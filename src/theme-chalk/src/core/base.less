@@ -1,0 +1,17 @@
+// Config global less under pte
+[class^=~'@{pte-prefix}-'],
+[class*=~' @{pte-prefix}-'] {
+  // 删除IE10中文本输入控件的清除按钮+
+  &::-ms-clear,
+  input::-ms-clear,
+  input::-ms-reveal {
+    display: none;
+  }
+
+  &,
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; // 1
+  }
+}
